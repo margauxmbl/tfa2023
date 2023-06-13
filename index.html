@@ -148,15 +148,39 @@
             &copy;Copyright epse
         </div>
     </footer>
-</div>
+
 <script>
     const img = document.querySelector("#mail2")
     const mailh1 = document.querySelector("#mailh1")
+
+    
 
     img.addEventListener('click',()=>{
         img.style.display= "none"
         mailh1.style.display = "block"
     })
+
+    var scrolling
+
+    console.log('test')
+
+    window.addEventListener('scroll',()=>{
+
+        scrolling = document.documentElement.scrollTop || window.scrollY || window.pageYOffset || document.body.scrollTop
+        console.log(scrolling)
+
+        
+        if(scrolling > 967)
+        {
+            fleche.classList.add('opacity')
+        }else if(scrolling < 967)
+        {
+            fleche.classList.remove('opacity')
+        }
+
+
+    })
+
 
     const fleche = document.querySelector("#fleche")
     fleche.addEventListener('click',()=>{
