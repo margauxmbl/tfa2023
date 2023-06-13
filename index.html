@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kinf</title>
+</head>
+<body>
+    <div class="slide" id="home">
+        <header>
+            <div id="logo"><img src="images/logo_artiste.png" alt="Logo"></div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#quiestce">Qui est-ce?</a></li>
+                    <li><a href="#demarche">Sa démarche artistique</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="home-container">
+            
+                <div class="title">
+                    <h1>Nicolas Fontaine</h1>
+                    <div class="ligne"></div>
+                    <h2>infographiste</h2>
+    
+                </div>
+            
+            <div class="perso">
+                <img src="images/artiste1.png" alt="Kinf">
+            </div>
+            <div class="citation">Avec le dessin, tout est possible</div>
+      </div>
+    </div>
+
+
+
+    <div class="slide" id="quiestce">
+        <img src="images/tache2.png" alt="deco" id="tache">
+        <div id="titre2"><h1>Qui est-ce ?</h1></div>
+        <div id="pres"><p><strong>Nicolas Fontaine</strong> est un artiste de 43 ans qui est né à <strong>Braine-le-comte</strong> et vit dans la région de <strong>Soignies</strong>. Il vit simplement entouré de ses amis et de sa famille. Dans la vie comme dans son métier, il essaie d'évoluer dans un environnement agréable. <strong>L'infographie</strong> est pour lui un second métier qu'il exerce durant son temps libre chez lui depuis maintenant 5 ans et qui lui permet d'exercer sa passion de manière plus personnelle. Son métier principal est <strong>l'enseignement spécialisé</strong> depuis 15 ans, il est professeur à La Louvière et ses élèves ont entre 14 et 21 ans. Son envie d'être infographiste lui vient de son <strong>grand père</strong> qui était <strong>dessinateur</strong> et lui a transmi se dont, Nicolas dessine depuis son plus jeune âge.</p></div>
+
+        <video id="video" src="images/Vidéo.mov"></video>
+        <div id="restart">restart</div>
+        <script>
+            const myvideo = document.querySelector('#video')
+            const restart = document.querySelector('#restart')
+
+            console.log(myvideo, restart)
+            var state = 0
+
+            myvideo.addEventListener('click',()=>{
+                if(state==0)
+                {
+                    myvideo.play()
+                    state=1
+                }else{
+                    myvideo.pause()
+                    state=0
+                }
+            })
+
+            restart.onclick = () => {
+                myvideo.currentTime = 0
+            }
+        </script>
+    </div>
+
+    
+    
+    <div class="slide" id="demarche">
+        <img src="images/tache2bis.png" alt="deco" id="tacheb">
+        <div id="image">
+            <img src="images/tache2.png" alt="deco" id="decobis">
+            <div id="deco"><a href="deco.html"><h2>Un peu de deco ?</h2></a></div>
+        </div>
+        <div id="titre3"><h1>Démarche artistique</h1></div>
+        <div id="art"><p>Nicolas a toujours été attiré par la <strong>BD</strong> (style"gros nez" comme astérix, tunique bleues,...), la <strong>caricature</strong> et le <strong>portrait</strong> en général. Il se sert de l'art comme manière de s'exprimer, de communiquer et de mettre en avant ses intérêts.</p></div>
+    </div>
+
+
+    
+    <div class="slide" id="services">
+        <div class="service-container">
+            <div id="rond">
+                <div id="logo-creation" >
+                    <img src="images/Ellipse3.png" alt="logo" class="rond">
+                </div>
+                <div id="flyers" >
+                    <img src="images/Ellipse1.png" alt="flyers" class="rond">
+                </div>
+                <div id="caricature" >
+                    <img src="images/Ellipse2.png" alt="caricature" class="rond">
+                </div>
+            </div>
+            <div id="bouton">
+                <div class="bouton" id="logo">
+                    <a href="logo.html"><h1>logo</h1></a>
+                </div>
+                <div class="bouton" id="flyers">
+                    <a href="flyers.html"><h1>flyers</h1></a>
+                </div>
+                <div class="bouton" id="caricature">
+                    <a href="caricature.html"><h1>caricature</h1></a>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+
+    
+    <div class="slide" id="contact">
+
+        <a href="#home"><img src="images/fleche.png" alt="fleche" id="fleche"></a>
+
+        <img src="images/tache2.png" alt="deco" id="tachec">
+        <div id="contact-position">
+            <h1>Contact</h1>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <input type="text" id="nom" name="nom" placeholder="nom">
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="adresse email">
+                </div>
+                <div class="form-group">
+                    <textarea name="message" id="message" placeholder="message"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="envoyer">
+                </div>     
+        </div>  
+        <img src="images/tache2.png" alt="deco" id="tached" class="taches">
+        <div id="insta2"><h1>instagram</h1></div>
+        <a href="https://instagram.com/kinf.art?igshid=MzRlODBiNWFlZA=="><img src="images/instagram.png" alt="instagram" id="insta"></a>
+        <img src="images/tache2.png" alt="deco" id="tachee" class="taches"> 
+        <div id="mail3"><h1>mail</h1></div>
+        <img src="images/email.png" alt="mail" id="mail2">
+        <div id="mail"><h1 id="mailh1">fontaine.nico@gmail.com</h1></div>
+        <img src="images/tache1.png" alt="deco" id="tachef">        
+    </div> 
+    <footer>
+        <div class="wrapper" id="copy">
+            &copy;Copyright epse
+        </div>
+    </footer>
+</div>
+<script>
+    const img = document.querySelector("#mail2")
+    const mailh1 = document.querySelector("#mailh1")
+
+    img.addEventListener('click',()=>{
+        img.style.display= "none"
+        mailh1.style.display = "block"
+    })
+
+    const fleche = document.querySelector("#fleche")
+    fleche.addEventListener('click',()=>{
+            fleche.classList.add('opacity')
+        })
+
+// window.addEventListener('scroll',()=>{
+
+//             scrolling = document.documentElement.scrollTop || window.scrollY ||
+//             window.pageYOffset || document.body.scrollTop
+//             console.log('scrolling')
+
+//             if(scrolling>10){
+//                 // console.log('ok')
+//                 fleche.classList.add('scroll')
+      
+//             }else if(scrolling < 10)
+//             {
+//                 // console.log('pas ok')
+//                 fleche.classList.remove('scroll')
+             
+//             }
+//         })
+
+</script>
+</body>
+</html>

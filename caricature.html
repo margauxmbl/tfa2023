@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="caricature.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <title>Document</title>
+    <title>Document</title>
+</head>
+<body>
+    <div class="slide" id="unpeudedeco">
+        <div id="entete3"></div>
+        <div id="texte-caricature"><p>Les caricatures sont le plus souvent des dessins qui grossissent les traits ou les défauts d'une personne</p></div>
+        
+        <div #swiperRef="" class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="caricature/bob.jpg" alt="caricature"></div>
+            <div class="swiper-slide"><img src="caricature/iam akh.jpg" alt="caricature"></div>
+            <div class="swiper-slide"><img src="caricature/jerem et geoff.jpg"></div>
+            <div class="swiper-slide"><img src="caricature/jluc.jpg" alt="caricature"></div>
+            <div class="swiper-slide"><img src="caricature/joey doigt en l'air 2.jpg" alt="caricature"></div>
+            <div class="swiper-slide"><img src="caricature/lilyo dbz.jpg" alt="caricature"></div>
+            <div class="swiper-slide"><img src="caricature/linck.jpg" alt="caricature"></div>
+            <div class="swiper-slide"><img src="caricature/wulk.jpg" alt="caricature"></div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+      
+        <!-- Initialize Swiper -->
+        <script>
+          var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            centeredSlides: true,
+            spaceBetween: 30,
+            pagination: {
+              el: ".swiper-pagination",
+              type: "fraction",
+            },
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+          });
+      
+          document
+            .querySelector(".prepend-2-slides")
+            .addEventListener("click", function (e) {
+              e.preventDefault();
+              swiper.prependSlide([
+                '<div class="swiper-slide">Slide ' + --prependNumber + "</div>",
+                '<div class="swiper-slide">Slide ' + --prependNumber + "</div>",
+              ]);
+            });
+          document
+            .querySelector(".prepend-slide")
+            .addEventListener("click", function (e) {
+              e.preventDefault();
+              swiper.prependSlide(
+                '<div class="swiper-slide">Slide ' + --prependNumber + "</div>"
+              );
+            });
+          document
+            .querySelector(".append-slide")
+            .addEventListener("click", function (e) {
+              e.preventDefault();
+              swiper.appendSlide(
+                '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>"
+              );
+            });
+          document
+            .querySelector(".append-2-slides")
+            .addEventListener("click", function (e) {
+              e.preventDefault();
+              swiper.appendSlide([
+                '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
+                '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
+              ]);
+            });
+        </script>
+
+    <footer>
+      <div class="wrapper" id="copy3">
+          &copy;Copyright epse
+      </div>
+  </footer>
+</body>
+</html>
