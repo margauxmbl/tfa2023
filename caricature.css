@@ -86,3 +86,12 @@ body {
   background-image: url(images/vague5.png);
   background-size: cover;
 }
+
+#fleche2{
+  position: fixed;
+  width: 3%;
+  transform: rotate(90deg);
+  bottom: 1%;
+  left: 0;
+  z-index: 100;
+}

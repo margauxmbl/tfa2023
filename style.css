@@ -219,10 +219,10 @@ nav ul li a:hover{
 
 #video{
     width: 50%;
-    height: 150%;
+    height: 170%;
     position: absolute;
     left: 0;
-    top: -10%;
+    top: -20%;
 }
 
 #quiestce::after{
@@ -715,11 +715,18 @@ filter: drop-shadow(0 5px 10px #848484);
     position: fixed;
     width: 3%;
     transform: rotate(180deg);
-    top: 0;
-    left: 50%;
+    bottom: 1%;
+    left: 1%;
     z-index: 100;
     opacity: 0;
-    
+}
+#fleche2{
+    position: fixed;
+    width: 3%;
+    transform: rotate(90deg);
+    bottom: 1%;
+    left: 0;
+    z-index: 100;
 }
 a{
     text-decoration: none;
@@ -728,3 +735,4 @@ a{
 .opacity{
     opacity: 1!important;
 }
+
